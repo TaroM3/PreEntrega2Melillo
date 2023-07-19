@@ -39,3 +39,33 @@ export const products =  [
 ]
 
 
+export const cart = [
+    {
+        "id": 1,
+        "products": [
+          {
+            "id": 4,
+            "title": "Jaguar",
+            "price": 17800,
+            "stock": 5,
+            "description": "Zapatillas de ultima generacion para el deporte",
+            "category": "urbanas",
+            "pictureUrl": "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669430220/rtokwmt3j03bblbfhwhb.jpg",
+            "quantity": 1
+          },
+          {
+            "id": 1,
+            "title": "Nike",
+            "price": 15000,
+            "stock": 4,
+            "description": "Estas son las mejores zapatillas",
+            "category": "deportivas",
+            "pictureUrl": "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669326932/free-metcon-4-zapatillas-de-entrenamiento-TQMCZg_fvia3m.png",
+            "quantity": 4
+          }
+        ]
+      }
+]
+
+
+

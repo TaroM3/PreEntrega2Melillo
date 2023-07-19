@@ -2,6 +2,8 @@ import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } fr
 import ItemCounterContainer from "../../components/common/itemCount/ItemCounterContainer"
 
 const ItemDetail = ({ item }) => {
+
+    
     return (
         <section style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
             <Box sx={{ margin: '5em',backgroundColor: 'secondary.main' }}>

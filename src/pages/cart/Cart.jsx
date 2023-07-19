@@ -15,7 +15,7 @@ const Cart = ({cartProducts}) => {
     <section style={{color: 'white', margin: '2em'}}>
         {/* Hola */}
         {/* {cartProducts.products[0].title} */}
-        {cartProducts.products.map((product) => 
+        {cartProducts.map((product) => 
             (<CartProduct key={product.id} product={product} />))
         }
     </section>

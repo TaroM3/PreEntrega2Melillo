@@ -3,6 +3,7 @@ import useAxios from "../../../utils/hooks/useAxios"
 import useCounter from "../../../utils/hooks/useCounter"
 import ItemCounter from "./ItemCounter"
 import { useEffect, useState } from "react"
+import { cart } from "../../../itemsMock"
 
 
 const ItemCounterContainer = ({ item }) => {
@@ -11,16 +12,24 @@ const ItemCounterContainer = ({ item }) => {
 
     useEffect(() =>{
         
-        let getCartData = axios.get('http://localhost:5000/carts/1')
-        
-        getCartData
-            .then((res) => {
 
-                // let productList = res.
-                setDataCart(res.data)
+        const task = new Promise((resolve, reject) => { 
+            resolve(cart[0])
+        })
+
+
+        task.then((resolve) => setDataCart(resolve.products))
+            .catch((error) => console.log(error))
+        // let getCartData = axios.get('http://localhost:5000/carts/1')
+        
+        // getCartData
+        //     .then((res) => {
+
+        //         // let productList = res.
+        //         setDataCart(res.data)
                 
-            })
-            .catch((err) => console.log(err))
+        //     })
+        //     .catch((err) => console.log(err))
         
         
         
@@ -31,11 +40,13 @@ const ItemCounterContainer = ({ item }) => {
             ...item,
             quantity: counter,
         }
-        setDataCart(dataCart.products.push(product))
+        setDataCart([...dataCart, product])
         // dataCart.products.push(product)
+        
         console.log(dataCart)
 
-        axios.put('http://localhost:5000/carts/1', dataCart)
+        
+        // axios.put('http://localhost:5000/carts/1', dataCart)
         // useAxios('http://localhost:5000/carts/1', product)
 
         
