@@ -36,7 +36,7 @@ const Navbar = () => {
         <div>
           <Button sx={{ backgroundColor: 'primary', margin: theme.spacing(2)}} onClick={changeMode}>Cambiar modo</Button>
           
-          <Link to='/cart/1' style={{color: 'white'}}>
+          <Link to='/cart' style={{color: 'white'}}>
             <CartWidget theme={theme} />
           </Link>
         </div>
